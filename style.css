@@ -1,7 +1,36 @@
 table,tr,td{
+    margin-left:auto; 
+    margin-right:auto;
     border-style:solid;
     border-width: 1px;
     border-color: black;
     padding: 1px;
+    font-size: 25px;
+}
+h {
+    font-size: 45px;
+    font-family: Times New Roman;
+    text-align: center; 
+}
+div {
+  background: #466368;
+  background: radial-gradient(red, white);
+  background-size: auto 100%;
+  border-radius: 6px;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border:0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content: center
 }
 

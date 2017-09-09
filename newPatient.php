@@ -5,12 +5,13 @@
 			session_start();
 		?>
     </head>
+	<div class="tab">
+  <button class="tablinks" onclick="openFolder(event, 'Patient Information')">Patient Information</button>
+  <button class="tablinks" onclick="openFolder(event, 'Risk Factor Evaluation')">Risk Factor Evaluation</button>
+	</div>
     <body>
-        <h1>Add a new patient</h1>
-		<form action="{$_SERVER['PHP_SELF']}" method="post">
-			<script>getConditions();</script>
-			<input type = "hidden" id = "conditions" name = "conditions">
-		</form>
+		<div id="Patient Information" class="tabcontent">
+        <h1>New Patient Information</h1
         <?php
 			$conditions = json_decode($_POST["conditions"]);
 			echo $conditions;
@@ -31,10 +32,40 @@
                        <input type="submit" name="submit" value = "Submit" /><br/>
                        
                    </form>
+				   </div>
 EOBODY;
             }else{
 				$form = <<< EOBODY
 					<p> Patient information has been recorded </p>
+EOBODY;
+			}
+			
+			echo $form;
+			
+
+        ?>
+        
+    <form action = "main.php" method = "post">
+        <input type="submit" name="home" value = "Return to Home" /><br/>
+    </form>
+		</div>
+		<div id="Risk Factor Evaluation" class="tabcontent">
+        <h1>Risk Factor Evaluation</h1>
+        <?php
+            $form = "";
+            if(!(isset($_POST['submit']))){
+                $form = <<< EOBODY
+                    <form action="{$_SERVER['PHP_SELF']}" method="post">
+                       <strong>Age: </strong><input type="text" name="Age" /><br /><br />
+                       <strong>Diabetic </strong><input type="text" name="diabetic"/><br /><br />
+                       <strong>History of Heart Disease</strong><input type = "text" name = "hdHistory"/><br /><br />
+ 	            <input type="submit" name="submit" value = "Submit" /><br/>
+                       
+                   </form>
+EOBODY;
+            }else{
+				$form = <<< EOBODY
+					<p> Risk Factor Evaluation has been recorded </p>
 EOBODY;
 			}
 			
@@ -44,6 +75,7 @@ EOBODY;
         
     <form action = "main.php" method = "post">
         <input type="submit" name="home" value = "Return to Home" /><br/>
-    </form> 
+    </form>
+		</div>
     </body>
 </html>

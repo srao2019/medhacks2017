@@ -45,7 +45,6 @@ EOBODY;
                                 <td>Patient Name</td>
                                 <td>Diagnosis</td>
                                 <td>Priority Score</td>
-                                <td>Physician</td>
                                 <td>Status</td>
                                 <td>Processed By</td>
                             </tr>

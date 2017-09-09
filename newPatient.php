@@ -1,13 +1,21 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+		<script src= "conditions.js"></script>
+		<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <?php
 			session_start();
 		?>
     </head>
     <body>
         <h1>Add a new patient</h1>
+		<form action="{$_SERVER['PHP_SELF']}" method="post">
+			<script>getConditions();</script>
+			<input type = "hidden" id = "conditions" name = "conditions">
+		</form>
         <?php
+			$conditions = json_decode($_POST["conditions"]);
+			echo $conditions;
             $form = "";
             if(!(isset($_POST['submit']))){
                 $form = <<< EOBODY

@@ -23,6 +23,12 @@ div.tab {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
+body {
+  background: #293f50;
+  color: #888;
+}
+
+}
 
 /* Style the buttons inside the tab */
 div.tab button {

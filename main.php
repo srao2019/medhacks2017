@@ -18,7 +18,7 @@
 						<strong>Username: </strong><input type="text" name="username" /><br /><br />
 						<strong>Password: </strong><input type="password" name="password"/><br /><br />
 						<input type="submit" name="login" value = "Login" /><br/>
-				</form>	
+                    </form>	
 EOBODY;
 			}
             $bottom = "";
@@ -34,9 +34,9 @@ EOBODY;
                     }else{
                         $bottom = "";
                     }
-                }if($bottom ===""){
-                    if(!(isset($_SESSION['loginid'])) && !(isset($_SESSION['password']))){
-                        $_SESSION['loginid'] = $nameValue;
+                }if($bottom === ""){
+                    if(!(isset($_SESSION['username'])) && !(isset($_SESSION['password']))){
+                        $_SESSION['username'] = $nameValue;
                         $_SESSION['password'] = $passwordValue;
                     }
                     $form = <<< EOBODY
@@ -58,7 +58,7 @@ EOBODY;
                 } 
             }
             $body = $form.$bottom;
-			echo $body
+			echo $body;
         ?>
     </body>
 </html>

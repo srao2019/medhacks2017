@@ -2,11 +2,10 @@
     <head>
         <meta charset="utf-8"/>
 		<link rel="stylesheet" href="patientstyle.css">
-		<script src= "conditions.js"></script>
-		<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <div>
+	</head>
 	<body>
         <h1>New Patient Information</h1>
+
         <?php
             $form = "";
             if(!(isset($_POST['submit']))){

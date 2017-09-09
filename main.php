@@ -1,5 +1,6 @@
 <html>
     <head>
+		<div>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="style.css">
         <?php
@@ -52,8 +53,9 @@ EOBODY;
                         </table>
                         <br /><br />
                         <form action="newPatient.php" method="post">
-                            <input type="submit" name="submitButton" value = "Add a new patient" /><br/>
+                            <input type="submit" style="margin-left:43.5%" name="submitButton" value = "Add a new patient" /><br/>						
                         </form>
+						
 EOBODY;
                 } 
             }
@@ -61,4 +63,5 @@ EOBODY;
 			echo $body
         ?>
     </body>
+	</div>		
 </html>

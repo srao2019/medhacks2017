@@ -6,7 +6,7 @@
 		?>
     </head>
     <body>
-        <h1>Add a new patient</h1>
+        <h1>New Patient Information</h1>
         <?php
             $form = "";
             if(!(isset($_POST['submit']))){

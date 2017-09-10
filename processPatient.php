@@ -11,13 +11,13 @@
     $timestamp = date('m/d/y',time());
     
     $latLon = <<< EOBODY
-        <form action = "{$_SERVER['PHP_SELF']}" method = "get">
+        <form method = "post">
             <input type = "hidden" id = "userLat" name = "userLat">
             <input type = "hidden" id = "userLon" name = "userLon">
             <script type=\"text/javascript\">getUserLocation()</script>
         </form>
-        
 EOBODY;
+    echo $latLon;
     $latitude = 39.437419;
     $longitude = -76.520534;
     

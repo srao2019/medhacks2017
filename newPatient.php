@@ -10,14 +10,14 @@
 		   <strong> Patient Information </strong><br></br>
 		   First Name: <input type="text" name="firstName" /><br /><br />
 		   Last Name:<input type="text" name="lastName"/><br /><br />
-		   DOB: <input type = "number" value = "month"/>/<input type="number" value="day">/<input type="number" value="year"><br /><br />
+		   DOB: <input type = "number" name = "month"/>/<input type="number" name="day">/<input type="number" name="year"><br /><br />
 		   Address: <input type = "text" name ="address"/><br><br/>
 		   <strong><p>Patient Condition</p></strong>
 		   Pulse Rate(bpm): <input type="number" name="pulse_rate"><br /><br />
-		   Systolic/Diastolic (mmHg): <input type="number" value="sbp">/<input type="number" value="dbp"><br /><br />
-		   SpO2 %: <input type="number" value="spo2 "><br /><br />
-		   Temperature: <input type="number" value="temp"><br /><br />
-		   Notes: <input type="text" name="lastName"/><br /><br />
+		   Systolic/Diastolic (mmHg): <input type="number" name="sbp">/<input type="number" name="dbp"><br /><br />
+		   SpO2 %: <input type="number" name="spo2 "><br /><br />
+		   Temperature: <input type="number" name="temp"><br /><br />
+		   Notes: <input type="text" name="notes"/><br /><br />
 		   <strong><p>Risk Factor Evaluation</p></strong>
 		   Age: <input type="text" name="age" /><br /><br />
 		   Diabetic: <input type="text" name="diabetic"/><br /><br />

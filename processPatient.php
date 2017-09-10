@@ -18,8 +18,8 @@
         </form>
 EOBODY;
     echo $latLon;
-    $latitude = 39.437419;
-    $longitude = -76.520534;
+    $latitude = 39.0119;  
+    $longitude = -98.4842;
     
     function getPatientID($db_connection){   
         $randInt = rand();

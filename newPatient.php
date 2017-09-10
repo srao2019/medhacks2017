@@ -11,18 +11,19 @@
             $form = "";
             if(!(isset($_POST['submit']))){
                 $form = <<< EOBODY
-                    <form action="processPatient.php" method="post">
-                       <strong>First Name: </strong><input type="text" name="firstName" /><br /><br />
-                       <strong>Last Name: </strong><input type="text" name="lastName"/><br /><br />
-                       <strong>DOB: </strong><input type = "number" name = "month"/>/<input type="number" name="day">/<input type="number" name="year"><br /><br />
-                       
+                    <form action="{$_SERVER['PHP_SELF']}" method="post">
+                       <strong> Patient Information </strong><br></br>
+					   First Name: <input type="text" name="firstName" /><br /><br />
+                       Last Name:<input type="text" name="lastName"/><br /><br />
+                       DOB: <input type = "number" value = "month"/>/<input type="number" value="day">/<input type="number" value="year"><br /><br />
+                       Address: <input type = "text" name ="address"/><br><br/>
                        <strong><p>Patient Condition</p></strong>
 					   Pulse Rate(bpm): <input type="number" name="pulse_rate"><br /><br />
-					   Systolic/Diastolic (mmHg): <input type="number" name="sbp">/<input type="number" name="dbp"><br /><br />
-					   SpO2 %: <input type="number" name="spo2 "><br /><br />
-					   Temperature: <input type="number" name="temp"><br /><br />
-					   Notes: <input type="text" name="notes"/><br /><br />
-					   <input type = "submit" name = "vitalsSubmit" value = "Submit"><br /><br />
+					   Systolic/Diastolic (mmHg): <input type="number" value="sbp">/<input type="number" value="dbp"><br /><br />
+					   SpO2 %: <input type="number" value="spo2 "><br /><br />
+					   Temperature: <input type="number" value="temp"><br /><br />
+					   Notes: <input type="text" name="lastName"/><br /><br />
+		</body>                      
                    </form>
 EOBODY;
             }else{
@@ -30,14 +31,16 @@ EOBODY;
 					<p> Patient information has been recorded </p>
 EOBODY;
 			}
+			if(isset($_POST['pulse_rate'])){
+				getBP($_POST['pulse_rate']);
+			}
 			echo $form;
 			
 
         ?>
         
     <form action = "Risk Factor.php" method = "post">
-        <input type="submit" name="riskFactor" value = "Proceed to Risk Factor" /><br/><br />
-	</form>
-	</body>	
-	</div>		
+        <input type="submit" name="home" value = "Proceed to Risk Factor" /><br/><br />
+		</div>
+		
 </html>

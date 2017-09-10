@@ -2,7 +2,7 @@
     class Database {
         private static $host = "localhost";
         private static $user = "dbuser";
-        private static $password = "FxC6W61BHGvGfUbP";
+        private static $password = "pwd";
         private static $database = "patientsdb";
     
         private static $connection;
@@ -25,6 +25,7 @@
             }
         }
         public static function getConnection() {
+            self::connectDB();
             return self::$connection;
         }
 

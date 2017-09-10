@@ -1,6 +1,0 @@
-<button class="tablinks" onclick="openFolder(event, 'Patient Information')" id="defaultOpen">Patient Information</button>
-
-<script>
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>

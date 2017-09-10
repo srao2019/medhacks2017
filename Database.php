@@ -34,19 +34,5 @@
                 self::$connection->close();
             }
         }
-        
-        public static function queryDB(string $query) : string {
-            if (!self::$connected) {
-                return "Not connected to database";
-            } else {
-                $result = self::$connection->query($query);
-                if (!$result) {
-                    die("Query failed: " . self::$connection->error);
-                    return "Query failed: " . self::$connection->error;
-                } else {
-                    return "Query succeeded";
-                }
-            }
-        }
     }
 ?>
